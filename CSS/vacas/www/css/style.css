@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+
+/*Reset*/ 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+
+/*Header*/
+
+header {
+  height: 40vh;
+  background-color: rgb(0, 0, 0);
+}
+
+header nav h1 {
+  padding: 2.2rem 2rem 0.5rem 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+nav ul li:nth-child(3) {
+    order: -1;
+}
+
+nav ul li:not(:nth-child(3)) {
+  background-color: rgb(255, 255, 255);
+  padding: .25rem 0.60rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+}
+
+nav ul li:last-child {
+  background-color: rgb(242, 153, 74);
+  display: block;
+  width: 7rem;
+  text-align: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+  }
+
+
+/*Main*/
+
+main{
+  background-color: rgb(242, 153, 74);
+}
+
+article {
+    padding: 0.7rem;
+}
+
+h2{
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+section p:last-of-type {
+    margin-bottom: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+font-size: 0.90rem;
+margin: 0.5rem;
+}
+
+ul.vacas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+ul.vacas > li {
+  background-color: rgb(0, 0, 0);
+  min-height: 26rem;
+  padding: 0;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.5rem;
+}
+
+ul.vacas img {
+  width: 16.5rem;
+  height: 14rem;
+  margin: 0 0 0.5rem 0;
+}
+
+ul.vacas li > a {
+  text-decoration: none;
+  background-color: rgb(201, 201, 201);
+  color: rgb(0, 0, 0);
+  display: block;
+  padding: 0.5rem;
+}
+
+ul.vacas p {
+  padding: 0.3rem;
+}
+
+/*Formulario Area*/
+
+section.form{
+    background-color: rgb(255, 255, 255);
+    padding: 0.7rem;
+}
+
+fieldset {
+  border: none;
+  margin: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 3rem;
+  padding: 1rem;
+}
+
+section.form h2 {
+  color: rgb(242, 153, 74);
+  text-align: initial;
+  padding: 1rem;
+}
+
+form input:not([type="submit"]),select,textarea,footer {
+  background-color: rgb(242, 153, 74);
+}
+
+[type="text"],[type="address"],select {
+  height: 2rem;
+}
+
+[type="submit"] {
+  max-width: 7rem;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 0.3rem 1rem;
+  margin: 1rem auto;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+}
+
+
+/*Footer*/
+
+footer {
+  margin-top: 2rem;
+  height: 20vh;
+}
+
+
+
+/*Media Queries*/
+
+@media (min-width: 320px) {
+
+    header ul {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav ul li:nth-child(4) {
+        order: -1;
+    }
+
+    ul.vacas li{
+        max-width: 16.5rem;
+    }
+    
+}
+
+@media (min-width: 375px) {
+
+    header {
+    height: 30vh;
+}
+
+
+@media (min-width: 400px) {
+
+  header {
+      position: relative;
+      height: 35vh;
+  }
+
+  nav ul li:last-child{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+  }
+
+  nav ul {
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      padding-top: 2.5rem;
+  }
+
+  nav ul li{
+      padding: 1rem;
+      margin: 0;
+  }
+
+  nav ul li a{
+      display: inline-block;
+      width: 4rem;
+      text-align: center;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  header {
+    height: 40vh;
+    background-image: url(https://s3-alpha-sig.figma.com/img/5b5d/086c/14bc46e4bfa5502c40aadaf2ff5f5a76?Expires=1603670400&Signature=Rk0PD-SjpCfIpCqxGfduKOOLY1CIL3jCgIgTLqufAMRsDn66gkyYcMrnOSOOCC3oxh14ncZbHjoNRmX-cpYralBlpLUIO74gz1s-SbqNClo6wGz97mg67ofh2hEcrybPhDGEMEgA--MZkOcoERa8~kGBZPugYWxKPxNXLY7aJ0A8z2xqeZfhzfBp48hDSt01t~PdLx~Ziem9ZgmiDD14SOVPOvoHUneKogH7utbudD-30z0g-y3c2xa1rwV7NDRRgytaCpToN3uJaFOGGQEHYTkrN0oZ3OueZ0Eyu9yieLJb81kLFPK8DKGuLw8Xvpmp842k1hxY69014ipFlIfo8Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  header nav h1{
+      font-size: 3rem;
+      padding: 0;
+  }
+
+  nav ul{
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      align-items: flex-start;
+  }
+
+  nav ul li:first-child{
+    background-color: transparent;
+  }
+
+  nav ul li:nth-child(2){
+    background-color: transparent;
+  }
+
+  nav ul li:last-child{
+      position: static;
+      border-radius: 0;
+      background-color: rgb(0, 0, 0);
+      order: -2;
+  }
+
+  nav ul li a{
+      width: 5.5rem;
+  }
+
+  nav ul li{
+      padding: 0;
+      margin: 0;
+  }
+
+  .comprar{
+      color: rgb(255, 255, 255);
+  }
+
+  section.principal {
+    columns: 2;
+}
+
+  section.principal p:last-of-type{
+    padding-top: 5.5rem;
+}
+
+.parrafos {
+    padding-bottom: 1.5rem;
+}
+
+  main {
+    background-color: rgb(242, 153, 74);
+    margin: 0;
+  }
+
+   h2 {
+    font-size: 3rem;
+    padding: 0.5rem 0;
+  }
+
+  ul.vacas {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  ul.vacas {
+    padding: 0 1rem;
+  }
+
+  ul.vacas > li {
+    background-color: rgb(0, 0, 0);
+    min-height: 23rem;
+    max-width: 13rem;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1.5rem auto;
+  }
+
+  ul.vacas li img{
+      max-width: 13rem;
+      max-height: 12rem;
+  }
+
+  ul.vacas li h3 {
+      font-size: 2.5rem;
+  }
+  
+  ul.vacas li > a {
+    padding: 1rem;
+  }
+
+  section.form {
+    background-color: rgb(255, 255, 255);
+  }
+
+  section.form h2 {
+    margin: 0 10rem 0 0;
+  }
+
+  article section p,section.form {
+    padding: 0 2rem;
+  }
+
+  form {
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  form input:not([type="submit"]),select,textarea {
+    display: block;
+    width: 20rem;
+  }
+
+  textarea {
+    display: block;
+    width: 41rem;
+  }
+
+  .newsletter {
+    width: 15rem;
+    margin: 1rem 25rem 1rem 0.5rem;
+    margin-right: 27rem;
+  }
+
+  [type="submit"] {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.3rem 1rem;
+    margin-left: 0.7rem;
+  }
+
+  div.newsletter input {
+    width: 2rem;
+    display: inline-block;
+  }
+
+  ul li img {
+    max-height: 15rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+    ul.vacas {
+    max-width: 55rem;
+    margin: 0 auto;
+    }
+
+    ul.vacas > li {
+        background-color: rgb(0, 0, 0);
+        min-height: 23rem;
+        max-width: 15rem;
+        padding: 0;
+        color: rgb(255, 255, 255);
+        margin-bottom: 1.5rem auto;
+      }
+    
+      ul.vacas li img{
+          max-width: 15rem;
+          max-height: 12rem;
+      }
+
+      
+}
+
+@media (min-width: 1050px) {
+
+    header, main, footer {
+    max-width: 65%;
+    margin: 0 auto;
+    }
+    
+    article {
+    max-width: 95%;
+    margin: 0 auto;
+    }
+
+
+    .principal h2 {
+        padding: 1rem 0 0 0;
+        margin: 0;
+        text-align: initial;
+    }
+
+    section.principal{
+        padding: 0;
+        columns: 1;
+    }
+
+    main article section.principal p{
+        padding: 0;
+    }
+
+    .parrafos {
+        display: flex;
+        align-items: center;
+    }
+    
+    section.principal div.parrafos p:last-of-type {
+        padding-top: 1.2rem;
+    }
+
+    ul.vacas {
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+    
+    
+    ul.vacas > li {
+        background-color: rgb(0, 0, 0);
+        min-height: 23rem;
+        max-width: 15rem;
+        padding: 0;
+        color: rgb(255, 255, 255);
+        margin: .2rem;
+    }
+        
+    
+    ul.vacas li img{
+        max-width: 15rem;
+        max-height: 12rem;
+    }
+
+            
+    section.form {
+        border: 1px solid rgb(201, 201, 201);
+    }
+
+}}
